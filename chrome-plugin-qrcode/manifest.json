@@ -1,13 +1,13 @@
 {
   "name": "二维码分享专家",
-  "description": "二维码分享专家，是一个把当前页面地址做成一个二维码，方便手机扫描，从而分享网址的工具，支持所有网站，并支持知乎的问题和答案分享，水木社区的帖子和回复。@cobola ",
-  "version": "1.1",
+  "description": "二维码分享专家，是一个把当前页面地址做成一个二维码，方便手机扫描，从而分享网址的工具。支持所有网站，并支持知乎的问题和答案分享，水木社区的帖子和回复。支持图片分享。@cobola ",
+  "version": "1.2",
   "permissions": [
     "tabs","contextMenus", "http://*.zhihu.com/*","http://*.125806.com/*","http://*.pengtou.org/*",
     "unlimitedStorage"
   ],
   "browser_action": {
-    "default_title": "二维码分享插件",
+    "default_title": "二维码分享专家",
     "default_icon": "icons/icon32.png",
     "default_popup": "popup.html"
   },
@@ -18,9 +18,9 @@
     "128": "icons/icon128.png"
   },
   "manifest_version": 2,
-  //  "background": {
-  //   "scripts": ["background.js"]
-  // },
+   "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [{
     "run_at": "document_end",
     "matches": [

@@ -1,3 +1,10 @@
+function fanyiip(){
+
+var shares = $("a:contains('转寄')");
+
+
+}
+
 
 function dosmthwww(){
 
@@ -25,6 +32,9 @@ function dosmth(location) {
 
   var base = location.substring(0, location.lastIndexOf("/"));
 
+  if(base.indexOf("single")>0){
+    return;
+  }
   var shares = $("a:contains('转寄')");
 
   for (var i = 0; i < shares.length; i++) {

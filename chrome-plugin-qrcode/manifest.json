@@ -1,7 +1,7 @@
 {
   "name": "二维码分享插件",
-  "description": "二维码分享插件，是一个把当前页面地址做成一个二维码，方便手机扫描，从而分享网址的工具，支持所有网站，并支持知乎的问题和答案分享。就是这样 @cobola ",
-  "version": "1.0",
+  "description": "二维码分享插件，是一个把当前页面地址做成一个二维码，方便手机扫描，从而分享网址的工具，支持所有网站，并支持知乎的问题和答案分享，水木社区的帖子和回复。@cobola ",
+  "version": "1.1",
   "permissions": [
     "tabs","contextMenus", "http://*.zhihu.com/*","http://*.125806.com/*","http://*.pengtou.org/*",
     "unlimitedStorage"
@@ -24,7 +24,8 @@
   "content_scripts": [{
     "run_at": "document_end",
     "matches": [
-      "http://*.zhihu.com/*"
+      "http://*.zhihu.com/*",
+      "http://*.newsmth.net/*"
     ],
     "js": ["jquery.min.js", "jquery.qrcode.min.js","jquery.popupoverlay.js","qr.js"],
     "css": ["qr.css"]

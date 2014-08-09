@@ -1,13 +1,66 @@
-var MAGIC_TEXT_LENGTH = 50;
 
-// util function: get font size of an element
-
-
-function dozhihuquestion() {
+function dosmthwww(){
 
 
+  var share = $("#a_share");
 
-  var location = window.location.href;
+  var location = $(share).attr("_u");
+
+  location = location.replace("http://www.newsmth.net/nForum","http://m.newsmth.net")
+
+  $(share).prepend("<a href='#' name='weixinshare' class='weixinshare' id='fuguiquestion' style='color:white'>微信分享</a> ");
+
+  $(share).after('<div class="fuguiwindow" id="fuguiqwindows" style="display:none">请扫描一下二维码以继续<div class="fuguicode" id="fuguiqcode"></div></div>');
+  $('#fuguiqcode').qrcode(location);
+
+  var scrpt = document.createElement("script");
+  scrpt.type = "text/javascript";
+  scrpt.innerHTML = "$('#fuguiquestion').click(function() {$('#fuguiqwindows').show();});$('#fuguiqwindows').click(function() {$('#fuguiqwindows').hide();});";
+  $('body').prepend(scrpt);
+
+}
+
+function dosmth(location) {
+
+
+  var base = location.substring(0, location.lastIndexOf("/"));
+
+  var shares = $("a:contains('转寄')");
+
+  for (var i = 0; i < shares.length; i++) {
+
+    var share = shares[i];
+
+
+    //就在这里追加了
+
+    var tid = $(share).attr("href");
+    tid = tid.substring(tid.lastIndexOf("/"),tid.length);
+
+    //地址 
+    var url = base + "/single/" + tid;
+
+    $(share).after(" | <a href='javascript:void(0);' name='weixinshare' class='weixinshare' id='weixinshare" + i + "' class='meta-item zu-autohide'><i class='z-icon-share'></i>微信分享</a> ");
+
+
+    $(share).after('<div class="fuguiwindow" id="fuguiwindow' + i + '" style="display:none">请扫描一下二维码以继续<div class="fuguicode" id="fuguicode' + i + '"></div></div>');
+    $('#fuguicode' + i).qrcode(url);
+
+    var scrpt = document.createElement("script");
+    scrpt.type = "text/javascript";
+    scrpt.innerHTML = "$('#weixinshare" + i + "').click(function() {$('#fuguiwindow" + i + "').show();});$('#fuguiwindow" + i + "').click(function() {$('#fuguiwindow" + i + "').hide();});";
+    $(share).prepend(scrpt);
+
+
+  }
+
+}
+
+
+
+function dozhihuquestion(location) {
+
+
 
   //现在题干上加一个分享
 
@@ -38,12 +91,11 @@ function dozhihuquestion() {
       // console.log("get answer url in single page " + url);
       // var aid = $(p).find("meta[itemprop='answer-url-token']").attr("content");
 
-      // $(share).before("<a href='#' onclick='javascript:wwwxinshow(\"" + url + "\");'  name='weixinshare'   class='meta-item toggle-comment'><i class='z-icon-share'></i>微信分享</a>");
       $(share).parent().before("<a href='#' name='weixinshare' class='weixinshare' id='weixinshare" + i + "' class='meta-item zu-autohide'><i class='z-icon-share'></i>微信分享</a> ");
 
 
       $(share).parent().after('<div class="fuguiwindow" id="fuguiwindow' + i + '" style="display:none">请扫描一下二维码以继续<div class="fuguicode" id="fuguicode' + i + '"></div></div>');
-   $('#fuguicode' + i).qrcode(url);
+      $('#fuguicode' + i).qrcode(url);
 
       var scrpt = document.createElement("script");
       scrpt.type = "text/javascript";
@@ -124,12 +176,23 @@ function dozhihuindex() {
 
 $(document).ready(function() {
   var location = window.location.href;
-  console.log("location is" + location);
   if (location == "http://www.zhihu.com/") {
     dozhihuindex();
   }
 
   if (location.indexOf("zhihu.com/question") > 0) {
-    dozhihuquestion();
+    dozhihuquestion(location);
   }
+
+  if (location.indexOf("m.newsmth.net") > 0) {
+
+    dosmth(location);
+  }
+
+  if(location.indexOf("www.newsmth.net")>0){
+
+    dosmthwww();
+  }
+
+
 });

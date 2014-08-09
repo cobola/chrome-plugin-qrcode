@@ -1,0 +1,15 @@
+﻿.fuguiwindow{
+    position: fixed;
+    top: 100px;
+    width: 306px;
+    height: 306px;
+    z-index: 999;
+    left: 200px;
+    border: 3px #ddd;
+    background: #ddd;
+    text-align: center;
+}
+
+.fuguicode{
+    margin: 0px auto;
+}

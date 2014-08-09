@@ -1,0 +1,32 @@
+{
+  "name": "二维码分享插件",
+  "description": "二维码分享插件，是一个把当前页面地址做成一个二维码，方便手机扫描，从而分享网址的工具，支持所有网站，并支持知乎的问题和答案分享。就是这样 @cobola ",
+  "version": "1.0",
+  "permissions": [
+    "tabs","contextMenus", "http://*.zhihu.com/*","http://*.125806.com/*","http://*.pengtou.org/*",
+    "unlimitedStorage"
+  ],
+  "browser_action": {
+    "default_title": "二维码分享插件",
+    "default_icon": "icons/icon32.png",
+    "default_popup": "popup.html"
+  },
+  "update_url":"http://cobola.github.io/qrcode.xml",  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2,
+  //  "background": {
+  //   "scripts": ["background.js"]
+  // },
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": [
+      "http://*.zhihu.com/*"
+    ],
+    "js": ["jquery.min.js", "jquery.qrcode.min.js","jquery.popupoverlay.js","qr.js"],
+    "css": ["qr.css"]
+  }]
+}

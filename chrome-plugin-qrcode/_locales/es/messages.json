@@ -1,0 +1,23 @@
+{
+  "chrome_extension_name": {
+    "message": "QRcode Master special for zhihu and newsmth"
+  },
+  "chrome_extension_description": {
+    "message": "Returns accept languages of the browser"
+  },
+  "image_to_qrcode": {
+    "message": "Generate this image to QRcode."
+  },
+  "selection_to_qrcode": {
+    "message": "Generate the selected character to QRcode."
+  },
+
+  "browser_action_title": {
+    "message": "Generate the page url to QRcode by QRcode Master"
+  },
+  "share_to_weixin": {
+    "message": "Get QRcode"
+  },"text_too_long": {
+    "message": "Max character is 500,already substring that."
+  }
+}

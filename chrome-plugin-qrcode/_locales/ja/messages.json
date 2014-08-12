@@ -1,0 +1,24 @@
+{
+  "chrome_extension_name": {
+    "message": "QRコードマスター"
+  },
+  "chrome_extension_description": {
+    "message": "専門家を共有する二次元コードは、二次元コード、特別なサポート水木を作り、平和を知っている現在のページのアドレスの一つです。"
+  },
+  "image_to_qrcode": {
+    "message": "画像は、二次元コードを生成する"
+  },
+  "selection_to_qrcode": {
+    "message": "二次元コードを生成するテキストを選択し"
+  },
+
+  "browser_action_title": {
+    "message": "現在のページは、二次元コードを生成する QRcode Master"
+  },
+  "share_to_weixin": {
+    "message": "二次元コード"
+  },
+  "text_too_long": {
+    "message": "最大サポート500バイトは、傍受されています。"
+  }
+}

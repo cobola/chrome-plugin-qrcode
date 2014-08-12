@@ -1,6 +1,46 @@
+
+function doweibo(){
+
+  var shares = $("a[action-type='feed_list_forward']");
+
+  var base = "http://weibo.cn/";
+
+  for (var i = 0; i < shares.length; i++) {
+
+    var share = shares[i];
+
+
+    //就在这里追加了
+
+    var tid = $(share).attr("action-data");
+    tid = tid.substring(tid.indexOf("&url=")+22,tid.indexOf("&mid="));
+
+
+    //地址 
+    var url = base + tid;
+
+    console.log("get url "+url);
+
+    $(share).after(" | <a href='javascript:void(0);' name='weixinshare' class='weixinshare' id='weixinshare" + i + "' class='meta-item zu-autohide'><i class='z-icon-share'></i>微信分享</a> ");
+
+
+    $(share).after('<div class="fuguiwindow" id="fuguiwindow' + i + '" style="display:none">请扫描一下二维码以继续<div class="fuguicode" id="fuguicode' + i + '"></div></div>');
+    $('#fuguicode' + i).qrcode(url);
+
+    var scrpt = document.createElement("script");
+    scrpt.type = "text/javascript";
+    scrpt.innerHTML = "$('#weixinshare" + i + "').click(function() {$('#fuguiwindow" + i + "').show();});$('#fuguiwindow" + i + "').click(function() {$('#fuguiwindow" + i + "').hide();});";
+    $(share).prepend(scrpt);
+
+
+  }
+
+}
+
+
 function fanyiip(){
 
-var shares = $("a:contains('转寄')");
+  var shares = $("a:contains('转寄')");
 
 
 }
@@ -203,6 +243,10 @@ $(document).ready(function() {
 
     dosmthwww();
   }
+
+  // if(location.indexOf("weibo.com")>0){
+  //   doweibo();
+  // }
 
 
 });

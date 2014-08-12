@@ -1,0 +1,26 @@
+{
+  "chrome_extension_name": {
+    "message": "二维码分享专家 QRcode Master"
+  },
+  "chrome_extension_description": {
+    "message": "二维码分享专家，是一个把当前页面地址做成一个二维码，特别支持水木和知乎。"
+  },
+  "image_to_qrcode": {
+    "message": "图片生成二维码"
+  },
+  "selection_to_qrcode": {
+    "message": "选中的文字生成二维码"
+  },
+
+  "browser_action_title": {
+    "message": "当前页面生成二维码 二维码分享专家"
+  },
+  "share_to_weixin": {
+    "message": "分享到微信"
+  },
+
+  "text_too_long": {
+    "message": "最大支持500个字节，已经截取。"
+  }
+
+}

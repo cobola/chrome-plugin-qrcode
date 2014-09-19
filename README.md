@@ -12,12 +12,17 @@
 截图
 
 
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/zhihu1.png)
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/zhihu2.png)
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/zhihu3.png)
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/smth1.png)
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/smth2.png)
-![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/smth3.png)
+![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/google1280x800/1400x560.png)
+
+
+![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/google1280x800/contextmenu.png)
+
+
+![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/google1280x800/selecttext.png)
+
+![](https://git.oschina.net/cobola/chrome-plugin-qrcode/raw/master/google1280x800/smth.png)
+
+
 
 
 

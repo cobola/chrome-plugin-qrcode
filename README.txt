@@ -5,3 +5,9 @@
 计划将来支持更多地网站。
 
 通过二维码，手机就可以把当前页面分享给好友，或者分享到朋友圈，省去了输入连接的麻烦。
+
+
+安装地址 <https://chrome.google.com/webstore/detail//eandllggnghikbggfgifghhbhfahojfm?hl=zh-CN>
+
+截图
+
